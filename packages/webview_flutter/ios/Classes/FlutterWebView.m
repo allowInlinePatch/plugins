@@ -91,6 +91,7 @@
     [self updateAutoMediaPlaybackPolicy:args[@"autoMediaPlaybackPolicy"]
                         inConfiguration:configuration];
     configuration.allowsInlineMediaPlayback = true;
+    configuration.mediaTypesRequiringUserActionForPlayback = [];
     
     _webView = [[FLTWKWebView alloc] initWithFrame:frame configuration:configuration];
     _navigationDelegate = [[FLTWKNavigationDelegate alloc] initWithChannel:_channel];
